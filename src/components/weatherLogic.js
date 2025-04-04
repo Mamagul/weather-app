@@ -59,6 +59,8 @@ const isCloud = (cloud, main) => {
     return <WiSnow size={50} />;
   } else if (main.includes("Thunderstorm")) {
     return <WiThunderstorm size={50} />;
+  } else if (main.includes("Clear")) {
+    return <WiDaySunny size={50} />;
   }
 };
 

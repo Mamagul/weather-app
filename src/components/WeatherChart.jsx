@@ -36,11 +36,11 @@ const WeatherChart = ({ forecast }) => {
     })
   );
 
-  console.log(forecast);
-  console.log(labels);
+  // console.log(forecast);
+  // console.log(labels);
   // 2️⃣ Создаём массив с температурами
   const temperatures = forecast.map((list) => list.main.temp);
-  console.log(temperatures);
+  // console.log(temperatures);
   const data = {
     labels,
     datasets: [

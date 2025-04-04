@@ -7,6 +7,7 @@ import Spinner from "react-bootstrap/Spinner";
 import { WiBarometer, WiHumidity } from "react-icons/wi";
 import { MdOutlineVisibility } from "react-icons/md";
 import WeatherChart from "./WeatherChart.jsx";
+import SavedCities from "./SavedCities.jsx";
 
 export default function WeatherSearch() {
   const [inputValue, setInputValue] = useState("");
@@ -21,7 +22,6 @@ export default function WeatherSearch() {
       setCityName(inputValue);
     }
   };
-
   return (
     <>
       <video
@@ -32,6 +32,7 @@ export default function WeatherSearch() {
         className="background_video"
       ></video>
       <div className="weatherSearching container">
+        <SavedCities onSelectCity={(name) => setCityName(name)} />
         <form className="weather_form">
           <input
             className="weather_input"
